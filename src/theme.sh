@@ -26,7 +26,7 @@ fi
 window_with_activity_style=$(get_tmux_option "@theme_window_with_activity_style" "italics")
 window_status_bell_style=$(get_tmux_option "@theme_status_bell_style" "bold")
 
-IFS=',' read -r -a plugins <<<"$(get_tmux_option "@theme_plugins" "datetime,weather")"
+IFS=',' read -r -a plugins <<<"$(get_tmux_option "@theme_plugins" "cwd,user,host")"
 
 tmux set-option -g status-left-length 100
 tmux set-option -g status-right-length 100
@@ -35,14 +35,16 @@ tmux set-window-option -g window-status-activity-style "$window_with_activity_st
 tmux set-window-option -g window-status-bell-style "${window_status_bell_style}"
 
 # message styling
-tmux set-option -g message-style "bg=${PALLETE[red]},fg=${PALLETE[bg_dark]}"
+tmux set-option -g message-style "bg=${PALLETE[bg_highlight]},fg=${PALLETE[magenta]}"
 
 # status bar
 status_bar_bg=${PALLETE[bg_highlight]}
+status_bar_fg=${PALLETE[white]}
 if [ "$transparent" = "true" ]; then
   status_bar_bg="default"
+  status_bar_fg=${PALLETE[fg]}
 fi
-tmux set-option -g status-style "bg=${status_bar_bg},fg=${PALLETE[white]}"
+tmux set-option -g status-style "bg=${status_bar_bg},fg=${status_bar_fg}"
 
 # border color
 tmux set-option -g pane-active-border-style "fg=$border_style_active_pane"
@@ -114,12 +116,12 @@ if [ "$theme_disable_plugins" -ne 1 ]; then
       # For battery, the content is actually a template that will be replaced when
       # running the script later
       if [ "$plugin" == "datetime" ] || [ "$plugin" == "battery" ]; then
-        plugin_output="#[fg=${PALLETE[white]},bg=${accent_color}]${plugin_execution_string}#[none]"
+        plugin_output="#[fg=${PALLETE[fg]},bg=${accent_color}]${plugin_execution_string}#[none]"
       else
-        plugin_output="#[fg=${PALLETE[white]},bg=${accent_color}]#($plugin_script_path)#[none]"
+        plugin_output="#[fg=${PALLETE[fg]},bg=${accent_color}]#($plugin_script_path)#[none]"
       fi
 
-      plugin_icon_output="${separator_icon_start}#[fg=${PALLETE[white]},bg=${accent_color_icon}]${plugin_icon}${separator_icon_end}"
+      plugin_icon_output="${separator_icon_start}#[fg=${PALLETE[bg]},bg=${accent_color_icon}]${plugin_icon}${separator_icon_end}"
 
       if [ ! $is_last_plugin -eq 1 ] && [ "${#plugins[@]}" -gt 1 ]; then
         plugin_output_string="${plugin_icon_output}${plugin_output} ${separator_end}"

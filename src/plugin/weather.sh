@@ -6,8 +6,8 @@ ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # shellcheck disable=SC2005
 plugin_weather_icon=$(get_tmux_option "@theme_plugin_weather_icon" " ")
-plugin_weather_accent_color=$(get_tmux_option "@theme_plugin_weather_accent_color" "blue7")
-plugin_weather_accent_color_icon=$(get_tmux_option "@theme_plugin_weather_accent_color_icon" "blue0")
+plugin_weather_accent_color=$(get_tmux_option "@theme_plugin_weather_accent_color" "bg_dark")
+plugin_weather_accent_color_icon=$(get_tmux_option "@theme_plugin_weather_accent_color_icon" "cyan")
 plugin_weather_location=$(get_tmux_option "@theme_plugin_weather_location" "")
 plugin_weather_unit=$(get_tmux_option "@theme_plugin_weather_unit" "")
 
