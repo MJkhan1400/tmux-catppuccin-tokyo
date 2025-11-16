@@ -2,6 +2,11 @@
   <h1>Catppuccin Tmux Theme</h1>
   
   <h4>A Catppuccin tmux theme with beautiful separators inspired by Tokyo Night tmux theme</h4>
+  
+  <p>
+    <strong>Catppuccin:</strong> <a href="https://github.com/catppuccin/catppuccin">https://github.com/catppuccin/catppuccin</a><br>
+    <strong>Tokyo Night:</strong> <a href="https://github.com/folke/tokyonight.nvim">https://github.com/folke/tokyonight.nvim</a>
+  </p>
     
   ---
     
@@ -18,6 +23,8 @@
 ## Features
 
 - [Transparency support](#Transparency-examples)
+- [Catppuccin color palette](https://github.com/catppuccin/catppuccin) with soothing dark and light variants
+- Beautiful separators inspired by Tokyo Night theme
 
 ## Plugins
 
@@ -32,6 +39,8 @@
 ## Screenshots
 
 ### Catppuccin - Theme Variations
+
+This theme combines the beautiful separator design from Tokyo Night with the soothing color palette of Catppuccin.
 
 | Inactive                                                                                                             | Active                                                                                                                      |
 | -------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
@@ -169,6 +178,14 @@ set -g @theme_transparent_right_separator_inverse ''
 ```
 
 ![Screenshot 2024-09-07 at 12 39 35](https://github.com/user-attachments/assets/a33417b1-34e0-4212-952e-7ef1e240e943)
+
+---
+
+## Credits
+
+- **[Catppuccin](https://github.com/catppuccin/catppuccin)** - Soothing pastel theme for the high-spirited!
+- **[Tokyo Night](https://github.com/folke/tokyonight.nvim)** - A clean, dark and beautiful Neovim theme that inspired the separator design
+- **[Original Tokyo Night Tmux Theme](https://github.com/fabioluciano/tmux-tokyo-night)** - The base theme this fork builds upon
 
 [features]: #features
 [screenshots]: #screenshots
