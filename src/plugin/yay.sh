@@ -12,17 +12,17 @@ plugin_yay_accent_color_icon=$(get_tmux_option "@theme_plugin_yay_accent_color_i
 export plugin_yay_icon plugin_yay_accent_color plugin_yay_accent_color_icon
 
 function load_plugin() {
-	if ! command -v yay &>/dev/null; then
-		exit 1
-	fi
+  if ! command -v yay &>/dev/null; then
+    exit 1
+  fi
 
-	outdated_packages=$(yay -Qu || true)
-	outdated_packages_count=$(echo "${outdated_packages}" | wc -l | xargs)
-	if [[ "${outdated_packages_count}" -gt 1 ]]; then
-		echo "$outdated_packages_count outdated packages"
-	else
-		echo "All updated"
-	fi
+  outdated_packages=$(yay -Qu || true)
+  outdated_packages_count=$(echo "${outdated_packages}" | wc -l | xargs)
+  if [[ "${outdated_packages_count}" -gt 1 ]]; then
+    echo "$outdated_packages_count outdated packages"
+  else
+    echo "All updated"
+  fi
 }
 
 load_plugin
