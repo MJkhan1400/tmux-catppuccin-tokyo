@@ -1,7 +1,7 @@
 <div align="center">
-  <h1>Tokyo Night Tmux Theme</h1>
+  <h1>Catppuccin Tmux Theme</h1>
   
-  <h4>A Tokyo Night tmux theme directly inspired from Tokyo Night vim theme</h4>
+  <h4>A Catppuccin tmux theme with beautiful separators inspired by Tokyo Night tmux theme</h4>
     
   ---
     
@@ -31,11 +31,11 @@
 
 ## Screenshots
 
-### Tokyo Night - Default Variation
+### Catppuccin - Theme Variations
 
 | Inactive                                                                                                             | Active                                                                                                                      |
 | -------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| ![Tokyo Night tmux theme - Default Variation](./assets/tokyo-night.png "Tokyo Night tmux theme - Default Variation") | ![Tokyo Night tmux theme - Default Variation](./assets/tokyo-night-active.png "Tokyo Night tmux theme - Default Variation") |
+| ![Catppuccin tmux theme - Mocha Variation](./assets/tokyo-night.png "Catppuccin tmux theme - Mocha Variation") | ![Catppuccin tmux theme - Mocha Variation](./assets/tokyo-night-active.png "Catppuccin tmux theme - Mocha Variation") |
 
 ## Install
 
@@ -51,7 +51,7 @@ Hit <kbd>prefix</kbd> + <kbd>I</kbd> to fetch the plugin and source it. You can 
 
 | Configuration                       | Description                               | Avaliable Options                                                       | Default            |
 | ----------------------------------- | ----------------------------------------- | ----------------------------------------------------------------------- | ------------------ |
-| `@theme_variation`                  | The tokyo night theme variation to be use | `night`, `storm`, `moon`                                                | `night`            |
+| `@theme_variation`                  | The catppuccin theme variation to be use | `frappe`, `latte`, `macchiato`, `mocha`                                  | `mocha`            |
 | `@theme_active_pane_border_style`   |                                           |                                                                         | `#737aa2`          |
 | `@theme_inactive_pane_border_style` |                                           |                                                                         | `#292e42`          |
 | `@theme_left_separator`             |                                           |                                                                         | ``                |
@@ -134,8 +134,8 @@ set -g @plugin 'tmux-plugins/tmux-logging'
 
 set -g @plugin 'fabioluciano/tmux-tokyo-night'
 
-### Tokyo Night Theme configuration
-set -g @theme_variation 'moon'
+### Catppuccin Theme configuration
+set -g @theme_variation 'mocha'
 set -g @theme_left_separator ''
 set -g @theme_right_separator ''
 set -g @theme_plugins 'datetime,weather,playerctl,yay'
