@@ -1,7 +1,12 @@
 <div align="center">
-  <h1>Tokyo Night Tmux Theme</h1>
+  <h1>Catppuccin Tmux Theme</h1>
   
-  <h4>A Tokyo Night tmux theme directly inspired from Tokyo Night vim theme</h4>
+  <h4>A Catppuccin tmux theme with beautiful separators inspired by Tokyo Night tmux theme</h4>
+  
+  <p>
+    <strong>Catppuccin:</strong> <a href="https://github.com/catppuccin/catppuccin">https://github.com/catppuccin/catppuccin</a><br>
+    <strong>Tokyo Night:</strong> <a href="https://github.com/folke/tokyonight.nvim">https://github.com/folke/tokyonight.nvim</a>
+  </p>
     
   ---
     
@@ -18,6 +23,8 @@
 ## Features
 
 - [Transparency support](#Transparency-examples)
+- [Catppuccin color palette](https://github.com/catppuccin/catppuccin) with soothing dark and light variants
+- Beautiful separators inspired by Tokyo Night theme
 
 ## Plugins
 
@@ -31,11 +38,13 @@
 
 ## Screenshots
 
-### Tokyo Night - Default Variation
+### Catppuccin - Theme Variations
+
+This theme combines the beautiful separator design from Tokyo Night with the soothing color palette of Catppuccin.
 
 | Inactive                                                                                                             | Active                                                                                                                      |
 | -------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| ![Tokyo Night tmux theme - Default Variation](./assets/tokyo-night.png "Tokyo Night tmux theme - Default Variation") | ![Tokyo Night tmux theme - Default Variation](./assets/tokyo-night-active.png "Tokyo Night tmux theme - Default Variation") |
+| ![Catppuccin tmux theme - Mocha Variation](./assets/tokyo-night.png "Catppuccin tmux theme - Mocha Variation") | ![Catppuccin tmux theme - Mocha Variation](./assets/tokyo-night-active.png "Catppuccin tmux theme - Mocha Variation") |
 
 ## Install
 
@@ -51,7 +60,7 @@ Hit <kbd>prefix</kbd> + <kbd>I</kbd> to fetch the plugin and source it. You can 
 
 | Configuration                       | Description                               | Avaliable Options                                                       | Default            |
 | ----------------------------------- | ----------------------------------------- | ----------------------------------------------------------------------- | ------------------ |
-| `@theme_variation`                  | The tokyo night theme variation to be use | `night`, `storm`, `moon`                                                | `night`            |
+| `@theme_variation`                  | The catppuccin theme variation to be use | `frappe`, `latte`, `macchiato`, `mocha`                                  | `mocha`            |
 | `@theme_active_pane_border_style`   |                                           |                                                                         | `#737aa2`          |
 | `@theme_inactive_pane_border_style` |                                           |                                                                         | `#292e42`          |
 | `@theme_left_separator`             |                                           |                                                                         | ``                |
@@ -134,8 +143,8 @@ set -g @plugin 'tmux-plugins/tmux-logging'
 
 set -g @plugin 'fabioluciano/tmux-tokyo-night'
 
-### Tokyo Night Theme configuration
-set -g @theme_variation 'moon'
+### Catppuccin Theme configuration
+set -g @theme_variation 'mocha'
 set -g @theme_left_separator ''
 set -g @theme_right_separator ''
 set -g @theme_plugins 'datetime,weather,playerctl,yay'
@@ -169,6 +178,14 @@ set -g @theme_transparent_right_separator_inverse ''
 ```
 
 ![Screenshot 2024-09-07 at 12 39 35](https://github.com/user-attachments/assets/a33417b1-34e0-4212-952e-7ef1e240e943)
+
+---
+
+## Credits
+
+- **[Catppuccin](https://github.com/catppuccin/catppuccin)** - Soothing pastel theme for the high-spirited!
+- **[Tokyo Night](https://github.com/folke/tokyonight.nvim)** - A clean, dark and beautiful Neovim theme that inspired the separator design
+- **[Original Tokyo Night Tmux Theme](https://github.com/fabioluciano/tmux-tokyo-night)** - The base theme this fork builds upon
 
 [features]: #features
 [screenshots]: #screenshots
