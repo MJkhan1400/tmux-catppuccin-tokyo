@@ -29,6 +29,7 @@
 ## Plugins
 
 - **Datetime** - Show datetime;
+- **Clock** - Show clock with configurable timezone;
 - **Weather** - Show weather;
 - **Playerctl** - Show playerctl;
 - **Spt** - Show Spotify;
@@ -67,7 +68,7 @@ Hit <kbd>prefix</kbd> + <kbd>I</kbd> to fetch the plugin and source it. You can 
 | `@theme_right_separator`            |                                           |                                                                         | ``                |
 | `@theme_window_with_activity_style` |                                           |                                                                         | `italics`          |
 | `@theme_status_bell_style`          |                                           |                                                                         | `bold`             |
-| `@theme_plugins`                    |                                           | `datetime`, `weather`, `playerctl`, `spt`, `homebrew`, `yay`, `battery` | `datetime,weather` |
+| `@theme_plugins`                    |                                           | `datetime`, `clock`, `weather`, `playerctl`, `spt`, `homebrew`, `yay`, `battery` | `datetime,weather` |
 | `@theme_disable_plugins`            | Disables plugins                          | `1`, `0`                                                                | `0`                |
 
 ## Plugins
@@ -82,6 +83,29 @@ Hit <kbd>prefix</kbd> + <kbd>I</kbd> to fetch the plugin and source it. You can 
 | `@theme_plugin_datetime_accent_color`      |             |                   |         |
 | `@theme_plugin_datetime_accent_color_icon` |             |                   |         |
 | `@theme_plugin_datetime_format`            |             |                   |         |
+
+### Clock
+
+> Shows clock with configurable timezone. Default timezone is Dubai.
+
+| Configuration                             | Description | Avaliable Options | Default |
+| ----------------------------------------- | ----------- | ----------------- | ------- |
+| `@theme_plugin_clock_icon`                | Clock icon  | Any character 🕐  | Nerd Font 'Clock' icon        |
+| `@theme_plugin_clock_accent_color`        | Background color | Palette color | `bg_dark` |
+| `@theme_plugin_clock_accent_color_icon`   | Icon color  | Palette color | `blue` |
+| `@theme_plugin_clock_timezone`            | Timezone for clock | Any valid timezone (e.g., Asia/Dubai, America/New_York) | `Asia/Dubai` |
+| `@theme_plugin_clock_format`              | Time format | Date format string | `%H:%M:%S` |
+
+#### Interactive Timezone Selection
+
+Press `prefix + @` to open an interactive menu and select timezone from a list of popular cities. The selected timezone is saved for the current tmux session.
+
+#### Example
+```bash
+set -g @theme_plugins 'datetime,clock,weather'
+set -g @theme_plugin_clock_timezone 'Asia/Dubai'
+set -g @theme_plugin_clock_format '%H:%M:%S %Z'
+```
 
 ### Weather
 
@@ -147,7 +171,7 @@ set -g @plugin 'fabioluciano/tmux-tokyo-night'
 set -g @theme_variation 'mocha'
 set -g @theme_left_separator ''
 set -g @theme_right_separator ''
-set -g @theme_plugins 'datetime,weather,playerctl,yay'
+set -g @theme_plugins 'datetime,clock,weather,playerctl,yay'
 
 run '~/.tmux/plugins/tpm/tpm'
 ```

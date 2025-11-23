@@ -141,3 +141,8 @@ if [ "$theme_disable_plugins" -ne 1 ]; then
 fi
 
 tmux set-window-option -g window-status-separator ''
+
+# Add key binding for clock timezone menu if clock plugin is enabled
+if [[ " ${plugins[*]} " =~ " clock " ]]; then
+  tmux bind-key '@' run-shell "$CURRENT_DIR/plugin/clock.sh menu"
+fi
