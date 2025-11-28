@@ -24,7 +24,7 @@ function generate_left_side_string() {
     local separator_end="#[bg=${PALLETE[bg_highlight]}]#{?client_prefix,#[fg=${PALLETE[yellow]}],#[fg=${PALLETE[bg_highlight]}]}${left_separator:?}#[none]"
   fi
 
-  echo "#[fg=${PALLETE[fg_gutter]},bold]#{?client_prefix,#[bg=${PALLETE[yellow]}],#[bg=${PALLETE[bg_highlight]},fg=${PALLETE[fg]},bold]} ${session_icon} #S ${separator_end}"
+  echo "#{?client_prefix,#[fg=${PALLETE[bg_dark]}],#[fg=${PALLETE[fg]},bold]}#{?client_prefix,#[bg=${PALLETE[yellow]}],#[bg=${PALLETE[bg_highlight]}]} ${session_icon} #S ${separator_end}"
 }
 
 function generate_inactive_window_string() {
